@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Abbiamo bisogno di un sito web per un'agenzia di viaggi!
 
 In questa pagina aggiungerai destinazioni di posti che sogni di visitare in futuro.
@@ -96,10 +98,16 @@ EXTRAS
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <style>
+      .card-img-top {
+        aspect-ratio: 16/10;
+        object-fit: cover;
+      }
+    </style>
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-xl bg-body-tertiary px-4">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary px-4">
       <div class="container">
         <a class="navbar-brand" href="#">
           <img
@@ -125,11 +133,11 @@ EXTRAS
           id="navbarNavAltMarkup"
         >
           <div class="navbar-nav align-items-center">
-            <a class="nav-link" aria-current="page" href="#">Home</a>
-            <a class="nav-link" href="#">Saldi</a>
-            <a class="nav-link" href="#">Welcome Summer</a>
-            <a class="nav-link" aria-disabled="true">Last Minute</a>
-            <a class="nav-link" aria-disabled="true">Recensioni</a>
+            <a class="nav-link" aria-current="page" href="#Home">Home</a>
+            <a class="nav-link" href="#Saldi">Saldi</a>
+            <a class="nav-link" href="#Welcome-summer">Welcome Summer</a>
+            <a class="nav-link" href="#Last-minute">Last Minute</a>
+            <a class="nav-link" href="#Recensioni">Recensioni</a>
           </div>
 
           <form class="d-flex" role="search">
@@ -150,9 +158,27 @@ EXTRAS
       </div>
     </nav>
     <main>
+      <div
+        class="alert alert-info d-flex justify-content-center alert-dismissible fade show my-3 align-items-center"
+        role="alert"
+      >
+        <p>
+          Ci sono
+
+          <strong id="viaggi"> </strong>
+          Viaggi disponibili, approfitta delle offerte!!
+        </p>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="alert"
+          aria-label="Close"
+        ></button>
+      </div>
       <div class="container bg-body-tertiary my-4 rounded py-2">
         <div class="container d-flex justify-content-center">
           <div class="row row-cols-2 align-items-center">
+            <a name="Home"></a>
             <div class="col">
               <div class="container">
                 <h1 class="text-successs text-center">Ita airways</h1>
@@ -185,102 +211,485 @@ EXTRAS
           </div>
         </div>
       </div>
-      <div class="container">
+      <div class="container my-4">
+        <a name="Saldi"></a>
         <div class="row row-cols-5 justify-content-between">
           <div class="col">
             <p class="fw-bold">Saldi</p>
           </div>
           <div class="col">
-            <p class="text-info">Scopri le offerte</p>
+            <p
+              class="text-info"
+              data-bs-target="#scopriLeOfferte"
+              aria-expanded="false"
+              aria-controls="scopriLeOfferte"
+              data-bs-toggle="collapse"
+            >
+              Scopri le offerte
+            </p>
           </div>
         </div>
-        <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4">
-          <div class="col">
-            <div class="card border border-info">
-              <img
-                src="https://images.unsplash.com/photo-1712009508464-8a41723abf63?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+        <div class="container collapse" id="scopriLeOfferte">
+          <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4">
+            <div class="col">
+              <div class="card border border-info">
+                <img
+                  src="https://images.unsplash.com/photo-1712009508464-8a41723abf63?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col">
-            <div class="card border border-info">
-              <img
-                src="https://images.unsplash.com/photo-1711699487364-7975fee8526c?q=80&w=1915&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+            <div class="col">
+              <div class="card border border-info">
+                <img
+                  src="https://images.unsplash.com/photo-1711699487364-7975fee8526c?q=80&w=1915&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col">
-            <div class="card border border-info">
-              <img
-                src="https://images.unsplash.com/photo-1711998059898-67072ebd396a?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+            <div class="col">
+              <div class="card border border-info">
+                <img
+                  src="https://images.unsplash.com/photo-1711998059898-67072ebd396a?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col">
-            <div class="card border border-info">
-              <img
-                src="https://plus.unsplash.com/premium_photo-1701198465439-732664c53b1b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+            <div class="col d-md-none d-lg-block">
+              <div class="card border border-info">
+                <img
+                  src="https://plus.unsplash.com/premium_photo-1701198465439-732664c53b1b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="container">
+      <div class="container my-4">
+        <a name="Welcome-summer"></a>
         <div class="row row-cols-5 justify-content-between">
           <div class="col">
             <p class="fw-bold">Welcome Summer</p>
           </div>
           <div class="col">
-            <p class="text-info">Nascondi sezione</p>
+            <p
+              class="text-info"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseExample"
+              aria-expanded="false"
+              aria-controls="collapseExample"
+            >
+              Nascondi sezione
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="container my-4 show" id="collapseExample">
+        <div class="row gy-3 row-cols-2 row-cols-lg-3 row-cols-xl-6">
+          <div class="col">
+            <div class="card shadow-lg">
+              <img
+                src="https://plus.unsplash.com/premium_photo-1697215175168-c363c30539bb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                class="card-img-top position-relative"
+                alt="..."
+              />
+              <p
+                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+              >
+                HOT
+              </p>
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-lg">
+              <img
+                src="https://plus.unsplash.com/premium_photo-1697215175168-c363c30539bb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                class="card-img-top position-relative"
+                alt="..."
+              />
+              <p
+                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+              >
+                HOT
+              </p>
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-lg">
+              <img
+                src="https://plus.unsplash.com/premium_photo-1697215175168-c363c30539bb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                class="card-img-top position-relative"
+                alt="..."
+              />
+              <p
+                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+              >
+                HOT
+              </p>
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-lg">
+              <img
+                src="https://plus.unsplash.com/premium_photo-1697215175168-c363c30539bb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                class="card-img-top position-relative"
+                alt="..."
+              />
+              <p
+                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+              >
+                HOT
+              </p>
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-lg">
+              <img
+                src="https://plus.unsplash.com/premium_photo-1697215175168-c363c30539bb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                class="card-img-top position-relative"
+                alt="..."
+              />
+              <p
+                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+              >
+                HOT
+              </p>
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-lg">
+              <img
+                src="https://plus.unsplash.com/premium_photo-1697215175168-c363c30539bb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                class="card-img-top position-relative"
+                alt="..."
+              />
+              <p
+                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+              >
+                HOT
+              </p>
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container my-4">
+        <h2>Offerte del giorno</h2>
+        <div class="row">
+          <div class="col-9 rounded shadow-sm">
+            <img
+              src="https://plus.unsplash.com/premium_photo-1697215175168-c363c30539bb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt=""
+              class="img-fluid"
+            />
+          </div>
+          <div class="col-3">
+            <h3>Catena montuosa</h3>
+            <p class="font-monospace">15/04/2024 - 16/04/2024</p>
+            <button class="btn btn-dark ladel">best offert</button>
+          </div>
+        </div>
+      </div>
+      <div class="container my-4">
+        <a name="Last-minute"></a>
+        <h2>Last Minute</h2>
+        <div class="row gy-2 row-cols-2 row-cols-lg-3 row-cols-xl-6">
+          <div class="col">
+            <img
+              src="https://plus.unsplash.com/premium_photo-1697215175168-c363c30539bb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt=""
+              class="img-fluid rounded object-fit-cover shadow"
+            />
+          </div>
+          <div class="col">
+            <img
+              src="https://plus.unsplash.com/premium_photo-1697215175168-c363c30539bb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt=""
+              class="img-fluid rounded object-fit-cover shadow"
+            />
+          </div>
+          <div class="col">
+            <img
+              src="https://plus.unsplash.com/premium_photo-1697215175168-c363c30539bb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt=""
+              class="img-fluid rounded object-fit-cover shadow"
+            />
+          </div>
+          <div class="col">
+            <img
+              src="https://plus.unsplash.com/premium_photo-1697215175168-c363c30539bb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt=""
+              class="img-fluid rounded object-fit-cover shadow"
+            />
+          </div>
+          <div class="col">
+            <img
+              src="https://plus.unsplash.com/premium_photo-1697215175168-c363c30539bb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt=""
+              class="img-fluid rounded object-fit-cover shadow"
+            />
+          </div>
+          <div class="col">
+            <img
+              src="https://plus.unsplash.com/premium_photo-1697215175168-c363c30539bb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt=""
+              class="img-fluid rounded object-fit-cover shadow"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="container my4">
+        <a name="Recensioni"></a>
+        <h2>Recensioni</h2>
+        <div class="row row-cols-1">
+          <div class="col">
+            <div class="row align-items-center my-2">
+              <div class="col-md-2">
+                <img
+                  src="https://images.unsplash.com/photo-1712015245072-11b32806e4f7?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt=""
+                  class="img-fluid rounded-circle"
+                  style="aspect-ratio: 1/1"
+                />
+              </div>
+              <div class="col-md-10">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae
+                  sit, in magnam natus nulla doloribus rem modi id. Repudiandae
+                  incidunt quia aliquid exercitationem autem quisquam non, fuga
+                  sit voluptatem ad.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="row align-items-center my-2">
+              <div class="col-md-2">
+                <img
+                  src="https://images.unsplash.com/photo-1712015245072-11b32806e4f7?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt=""
+                  class="img-fluid rounded-circle"
+                  style="aspect-ratio: 1/1"
+                />
+              </div>
+              <div class="col-md-10">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
+                  dicta reiciendis nesciunt, maiores ea itaque maxime
+                  voluptatibus dolorum, ex molestias rerum adipisci facilis
+                  nostrum nisi tempore temporibus nulla tenetur nihil.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="row align-items-center my-2">
+              <div class="col-md-2">
+                <img
+                  src="https://images.unsplash.com/photo-1712015245072-11b32806e4f7?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt=""
+                  class="img-fluid rounded-circle"
+                  style="aspect-ratio: 1/1"
+                />
+              </div>
+              <div class="col-md-10">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
+                  fugit quibusdam esse, minus reiciendis explicabo. Cum quo quod
+                  fugiat enim excepturi in maiores amet dicta animi facilis,
+                  autem nisi corrupti?
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="modal fade"
+        id="myModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">
+                Contattaci
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="mb-3">
+                  <label for="recipient-name" class="col-form-label"
+                    >Email:</label
+                  >
+                  <input type="mail" class="form-control" id="recipient-name" />
+                </div>
+                <div class="mb-3">
+                  <label for="message-text" class="col-form-label"
+                    >Message:</label
+                  >
+                  <textarea class="form-control" id="message-text"></textarea>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-bs-dismiss="modal"
+              >
+                Send message
+              </button>
+            </div>
           </div>
         </div>
       </div>
     </main>
+
+    <footer
+      class="container bg-dark d-flex justify-content-center py-3 text-center"
+    >
+      <div class="row row-cols-1 gy-2 align-items-center">
+        <div class="col">
+          <button
+            class="btn btn-outline-light"
+            id="myInput"
+            data-bs-toggle="modal"
+            data-bs-target="#myModal"
+            data-bs-whatever="@mdo"
+          >
+            Contattaci
+          </button>
+        </div>
+        <div class="col">
+          <p class="text-light">
+            &copy; Ita Airlains Travel. All Right Reserved
+          </p>
+        </div>
+      </div>
+    </footer>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script>
+      const alertPlaceholder = document.getElementById("viaggi");
+      const numeroViaggi = () => {
+        const numeroCard = document.querySelectorAll(".card");
+        let sum = 0;
+        for (let i = 0; i < numeroCard.length; i++) {
+          sum += 1;
+        }
+        alertPlaceholder.innerText = " " + sum + " ";
+      };
+      numeroViaggi();
+      const myModal = document.getElementById("myModal");
+      const myInput = document.getElementById("myInput");
+
+      myModal.addEventListener("shown.bs.modal", () => {
+        myInput.focus();
+      });
+    </script>
   </body>
 </html>
